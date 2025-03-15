@@ -1,2 +1,9 @@
-pool:
-  name: 'Default'  # Use your agent pool name
+stages:
+- stage: Build
+  displayName: 'Build Stage'
+  jobs:
+  - job: BuildJob
+    displayName: 'Build the project'
+    steps:
+    - script: echo "Building the project..."
+      displayName: 'Run Build Command'
