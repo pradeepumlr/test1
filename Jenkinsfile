@@ -13,7 +13,7 @@ pipeline {
             steps {
                 bat '''
                 cd \usr\bin\ansible\\playbooks
-                ansible-playbook -i hosts.ini deploy_app.yml -vvv
+                ansible-playbook -i inventor.ini deploy_app.yml -vvv
                 '''
             }
         }
