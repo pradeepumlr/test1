@@ -1,13 +1,4 @@
----
-- name: Deploy Maven Application
-  hosts: webserver
-  become: yes
+- hosts: webserver
   tasks:
-    - name: Copy JAR file to remote server
-      copy:
-        src: target/my-app.jar
-        dest: /home/ubuntu/my-app.jar
-        mode: 0755
-
-    - name: Start application
-      command: nohup java -jar /home/ubuntu/my-app.jar &
+    - copy: src=target/my-app.jar dest=/home/ubuntu/my-app.jar
+    - command: nohup java -jar /home/ubuntu/my-app.jar &
