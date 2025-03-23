@@ -1,4 +1,10 @@
-- hosts: webserver
-  tasks:
-    - copy: src=target/my-app.jar dest=/home/ubuntu/my-app.jar
-    - command: nohup java -jar /home/ubuntu/my-app.jar &
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                bat 'mvn clean install'
+            }
+        }
+        
+}
