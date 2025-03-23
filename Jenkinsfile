@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy with Ansible') {
             steps {
                 bat '''
-                cd C:\\ansible\\playbooks
+                cd \usr\bin\ansible\\playbooks
                 ansible-playbook -i hosts.ini deploy_app.yml -vvv
                 '''
             }
