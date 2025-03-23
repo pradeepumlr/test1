@@ -1,10 +1,6 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            steps {
-                bat 'mvn clean install'
-            }
-        }
-        
-}
+---
+- name: Build Artifact on the Server
+  hosts: webserver
+  tasks:
+    - name: Run Maven build
+      command: mvn clean install
