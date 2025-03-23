@@ -9,12 +9,11 @@ pipeline {
                 bat 'mvn clean package'
             }
         }
-
         stage('Deploy with Ansible') {
             steps {
-                sh '''
-                cd /usr/bin/ansible/playbook
-                ansible-playbook -i hosts.ini deploy_app.yml
+                bat '''
+                cd C:\\ansible\\playbooks
+                ansible-playbook -i hosts.ini deploy_app.yml -vvv
                 '''
             }
         }
