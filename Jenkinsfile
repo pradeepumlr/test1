@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh '''
                 cd /home/pradeep/ansible-playbooks
-                ansible-playbook -i hosts.ini deploy_app.yml
+                ansible-playbook -i inventory.ini deploy_app.yml
                 '''
             }
         }
