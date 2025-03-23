@@ -1,6 +1,9 @@
 ---
-- name: Build Artifact on the Server
+- name: Clean and Build Maven Project
   hosts: webserver
   tasks:
-    - name: Run Maven build
-      command: mvn clean install
+    - name: Execute Maven clean
+      shell: mvn clean
+
+    - name: Execute Maven build
+      shell: mvn compile
