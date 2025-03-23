@@ -1,9 +1,10 @@
 ---
-- name: Clean and Build Maven Project
+- name: Clean and Build Maven Project on Windows
   hosts: webserver
   tasks:
     - name: Execute Maven clean
-      shell: mvn clean
+      bat: MAVEN clean
 
     - name: Execute Maven build
-      shell: mvn compile
+      bat: MAVEN compile
+
