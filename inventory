@@ -1,2 +1,2 @@
 [webserver]
-remote-server-ip ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+192.168.146.130 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
