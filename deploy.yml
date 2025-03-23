@@ -3,8 +3,8 @@
   hosts: webserver
   tasks:
     - name: Execute Maven clean
-      bat: MAVEN clean
+      bat: mvn clean
 
     - name: Execute Maven build
-      bat: MAVEN compile
+      bat: mvn compile
 
