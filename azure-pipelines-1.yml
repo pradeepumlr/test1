@@ -1,16 +1,9 @@
 trigger:
-- master  # or main
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UseNode@1
-  inputs:
-    version: '18.x'
-
-- script: |
-    npm install
-    npm run build
-    npm test
-  displayName: 'Install, Build and Test'
+- script: echo "Hello from Azure Pipelines!"
+  displayName: 'Run a simple command'
